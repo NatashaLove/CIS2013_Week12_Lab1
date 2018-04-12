@@ -3,7 +3,7 @@
 
 using namespace std;
 // the class will remember all data changes in the main
-class Person {
+class Human {
 		private:
 		int legs;
 		int arms;
@@ -13,7 +13,7 @@ class Person {
 		string hair;
 		string name;
 		
-		Person () {
+		Human () {
 			setName ();
 			setHair (); // construct - returns the function after creating an object
 			legs = 2;
@@ -43,19 +43,37 @@ class Person {
 		}
 		
 };
+// class Man and Woman inherit from class Human all what n public
+class Man : public Human {
+	public:
+	
+	bool hasEgo = true;
+	string pee = "standing";
+	
+};
+class Woman : public Human {
+	public:
+	
+	bool hasEgo = false;
+	string pee = "sitting";
+	
+};
 
 int main () {
 	
-	Person sue;
-	Person bob;
+	Man bob;
+	Woman sue;
 
 	cout << "Our "<< bob.name <<  " has " << bob.getLegs() << " legs and " << bob.getArms() << " arms and " << 
 	bob.hair << " hair " << endl;
 	
+	cout << bob.name <<  " has Ego? " <<bob.hasEgo << endl << " and pees " << bob.pee << endl;
+	
 	sue.setLegs();
 	
 	cout << "Our "<< sue.name <<  " has " << sue.getLegs() << " legs and " << sue.getArms() << " arms and " << 
-	sue.hair << " hair " << endl;
+	sue.hair << " hair " << endl << " has Ego? " <<sue.hasEgo << endl << " and pees " << sue.pee << endl;
+	
 	
 	
 	
