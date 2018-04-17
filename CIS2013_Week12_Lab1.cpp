@@ -43,7 +43,7 @@ class Human {
 		}
 		
 };
-// class Man and Woman inherit from class Human all what n public
+// class Man and Woman inherit from class Human all what in public
 class Man : public Human {
 	public:
 	
